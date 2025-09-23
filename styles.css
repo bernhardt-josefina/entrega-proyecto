@@ -1,27 +1,47 @@
-/* BASE */
-/* fff blanco, ccc gris claro, 333 gris oscuro */
+/* PALETA DE COLORES (Variables) */
+:root {
+  --color-primario: #0B1957;
+  --color-secundario: #9ECCFA;
+  --color-acento: #6c5ce7;
+  --color-acento-hover: #4834d4;
+  --color-fondo: #F8F3EA;
+  --color-claro: #E6D8C7;
+  --color-texto: #333;
+  --color-link: #6cacc5;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
-    background-color: #D7E8F8;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #0B1957;
+  background-color: var(--color-secundario);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-primario);
+  line-height: 1.5;
 }
+/* RESPONSIVIDAD */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+.footer-container {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
 /* HEADER */
 
 header {
-    background-color: #9ECCFA;
+    background-color: var(--color-secundario);
     padding: 15px 20px;
 }
 
@@ -44,19 +64,19 @@ header {
 
 .profile-icon {
     font-size: 40px;
-    color: #0B1957;
+    color: var(--color-primario);
     margin-right: 10px;
 }
 
 .profile-text h1 {
     font-size: 18px;
-    color: #0B1957;
+    color: var(--color-primario);
     margin-bottom: 4px;
 }
 
 .profile-text p {
     font-size: 14px;
-    color: #6cacc5;
+    color: var(--color-link);
     margin: 0;
 }
 
@@ -67,17 +87,18 @@ nav ul {
 }
 
 nav ul li a {
-    color: #6cacc5;
+    color: var(--color-link);
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #0B1957;
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--color-primario);
     text-decoration: underline;
 }
 
-/* MAIN */
+/* INDEX */
 
 .hero {
     display: flex;
@@ -85,7 +106,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     padding: 60px 20px;
-    background-color: #E6D8C7;
+    background-color: var(--color-claro);
 }
 
 .hero-image {
@@ -107,7 +128,7 @@ nav ul li a:hover {
 .hero-text h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #0B1957;
+    color: var(--color-primario);
 }
 
 .hero-text p {
@@ -115,36 +136,39 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.cta-button {
-    background-color: #fff;
-    border: 2px solid #9ECCFA;
-    color: #0B1957;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s ease;
+/* BOTONES */
+.cta-button,
+.plan-button,
+.contacto-form button {
+  background-color: var(--color-acento);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.cta-button:hover {
-    background-color: #0B1957;
-    color: #F8F3EA;
+.cta-button:hover,
+.plan-button:hover,
+.contacto-form button:hover {
+  background-color: var(--color-acento-hover);
+  transform: translateY(-2px);
 }
 
 /* FOOTER */
-
-footer {
-    background-color: #D7E8F8;
-    color: #0B1957;
-    padding: 10px 0;
-    font-size: 0.9rem;
-}
-
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  padding: 10px 0;
+  font-size: 0.9rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .footer-location, .footer-email {
@@ -156,13 +180,13 @@ footer {
 
 .footer-location i,
 .footer-email i {
-    color: #0B1957;
+    color: var(--color-primario);
 }
 
 /* SOBRE MÍ */
 
 .sobremi {
-    background-color: #E6D8C7;
+    background-color: var(--color-claro);
     padding: 60px 20px;
 }
 
@@ -183,7 +207,7 @@ footer {
 .sobremi-texto h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #0B1957;
+    color: var(--color-primario);
 }
 
 .sobremi-texto h3 {
@@ -213,7 +237,7 @@ footer {
 /* PLANES */
 
 .planes {
-    background-color: #F8F3EA;
+    background-color: var(--color-fondo);
     padding: 60px 20px;
 }
 
@@ -245,37 +269,24 @@ footer {
 .plan-card h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #0B1957;
+    color: var(--color-primario);
 }
 
 .plan-card .subtitulo {
     font-size: 1rem;
-    color: #6cacc5;
+    color: var(--color-link);
 }
 
 .plan-card p {
     font-size: 1rem;
     margin-bottom: 20px;
-    color: #333;
-}
-
-.plan-button {
-    background-color: #9ECCFA;
-    color: #fff;
-    padding: 10px 18px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.plan-button:hover {
-    background-color: #0B1957;
+    color: var(--color-texto);
 }
 
 /* RECETAS */
 
 .recetas {
-    background-color: #F8F3EA;
+    background-color: var(--color-fondo);
     padding: 60px 20px;
 }
 
@@ -286,13 +297,13 @@ footer {
 
 .recetas-header h2 {
     font-size: 2rem;
-    color: #0B1957;
+    color: var(--color-primario);
     margin-bottom: 10px;
 }
 
 .recetas-header p {
     font-size: 1.2rem;
-    color: #6cacc5;
+    color: var(--color-link);
 }
 
 .recetas-container {
@@ -310,7 +321,7 @@ footer {
     border-radius: 8px;
     overflow: hidden;
     background-color: #fff;
-    color: #0B1957;
+    color: var(--color-primario);
     transition: transform 0.3s ease;
 }
 
@@ -336,7 +347,7 @@ footer {
 /* CONTACTO */
 
 .contacto {
-    background-color: #F8F3EA;
+    background-color: var(--color-fondo);
     padding: 60px 20px;
 }
 
@@ -347,13 +358,13 @@ footer {
 
 .contacto-header h2 {
     font-size: 2rem;
-    color: #0B1957;
+    color: var(--color-primario);
     margin-bottom: 10px;
 }
 
 .contacto-header p {
     font-size: 1.1rem;
-    color: #333;
+    color: var(--color-texto);
 }
 
 .contacto-form {
@@ -386,20 +397,4 @@ footer {
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: vertical;
-}
-
-.contacto-form button {
-    align-self: center;
-    background-color: #9ECCFA;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contacto-form button:hover {
-    background-color: #0B1957;
 }
