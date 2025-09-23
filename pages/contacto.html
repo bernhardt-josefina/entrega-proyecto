@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Nutricionista Camila Guidotti | Uruguay</title>
+</head>
+<body>
+    <header> 
+    <div class="header-container">
+            <div class="profile">
+                <i class="profile-icon"></i>
+                <a href="../index.html">
+                    <img src="../images/logo.jpg" alt="Logo de la Licenciada en Nutrición Camila Guidotti" class="logo" />
+                </a>
+                <div class="profile-text">
+                    <h1>Camila Guidotti</h1>
+                    <p>Licenciada en Nutrición</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="sobremi.html">Sobre mi</a></li>
+                    <li><a href="planes.html">Planes</a></li>
+                    <li><a href="recetas.html">Recetas</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                 </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="contacto">
+            <div class="contacto-header">
+                <h2>Contacto</h2>
+                <p>Completa el formulario para hacer tu consulta o recibir más información.<br/> O al WhatsApp <strong>+598 99 999 999</strong></p>
+            </div>
+            <form class="contacto-form">
+                <div class="form-row">
+                    <input type="text" name="Nombre" placeholder="Nombre" required/>
+                    <input type="email" name="email" placeholder="E-mail" required/>
+                </div>
+
+                <div class="form-row">
+                    <input type="tel" name="telefono" placeholder="Teléfono" required/>
+                    
+                    <select name="motivo" required>
+                        <option value="" disable selected>Motivo de contacto</option>
+                        <option value="consulta">Consulta general</option>
+                        <option value="planes">Planes y precios</option>
+                        <option value="receta">Recetas</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+
+                <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="6" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Montevideo, Uruguay</span>
+            </div>
+            <div class="footer-email">
+                <i class="fas fa-at"></i>
+                <span>nutrinutrinutri@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
