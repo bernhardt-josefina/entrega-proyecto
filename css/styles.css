@@ -1,0 +1,349 @@
+.receta-card, .plan-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #9ECCFA;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #0B1957;
+  line-height: 1.5;
+}
+
+/*HEADER*/
+header {
+  background-color: #9ECCFA;
+  padding: 15px 20px;
+}
+
+.header-container {
+  background-color: #9ECCFA;
+  padding: 15px 20px;
+}
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.profile-text h1 {
+  color: #0B1957;
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+.profile-text p {
+  color: #6cacc5;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    margin-top: 10px;
+  }
+}
+.navbar-nav .nav-link {
+  color: #6cacc5 !important;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+  color: #0B1957 !important;
+  text-decoration: underline;
+}
+
+/*INDEX*/
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background-color: #E6D8C7;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .hero-image {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.hero-text {
+  flex: 1 1 300px;
+  padding: 20px;
+  text-align: left;
+}
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0B1957;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .hero-text {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/*SOBRE MI*/
+.sobremi {
+  background-color: #E6D8C7;
+  padding: 60px 20px;
+}
+.sobremi-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+.sobremi-texto {
+  flex: 1 1 400px;
+}
+.sobremi-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0B1957;
+}
+.sobremi-texto h3 {
+  font-size: 1.5rem;
+  margin: 30px 0 10px;
+}
+.sobremi-texto p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.sobremi-foto {
+  flex: 1 1 250px;
+  text-align: center;
+}
+.sobremi-foto .foto-perfil {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ccc;
+}
+
+/*PLANES*/
+.planes {
+  background-color: #F8F3EA;
+  padding: 60px 20px;
+}
+.planes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.plan-card {
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+.plan-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #0B1957;
+}
+.plan-card .subtitulo {
+  font-size: 1rem;
+  color: #6cacc5;
+}
+.plan-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/*RECETAS*/
+.recetas {
+  background-color: #F8F3EA;
+  padding: 60px 20px;
+}
+.recetas-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.recetas-header h2 {
+  font-size: 2rem;
+  color: #0B1957;
+  margin-bottom: 10px;
+}
+.recetas-header p {
+  font-size: 1.2rem;
+  color: #6cacc5;
+}
+.recetas-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.receta-card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  overflow: hidden;
+  color: #0B1957;
+  transition: transform 0.3s ease;
+}
+.receta-card:hover {
+  transform: translateY(-5px);
+}
+.receta-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #ddd;
+}
+.receta-card p {
+  padding: 10px;
+  font-size: 1rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+/*CONTACTO*/
+.contacto {
+  background-color: #F8F3EA;
+  padding: 60px 20px;
+}
+.contacto-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contacto-header h2 {
+  font-size: 2rem;
+  color: #0B1957;
+  margin-bottom: 10px;
+}
+.contacto-header p {
+  font-size: 1.1rem;
+  color: #333;
+}
+.contacto-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contacto-form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contacto-form .form-row input, .contacto-form .form-row select {
+  flex: 1 1 250px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .contacto-form .form-row {
+    flex-direction: column;
+  }
+}
+.contacto-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+.contacto-form button {
+  background-color: #6c5ce7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.contacto-form button:hover {
+  background-color: #4834d4;
+  transform: translateY(-2px);
+}
+
+/*FOOTER*/
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #9ECCFA;
+  color: #0B1957;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer-location,
+.footer-email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.footer-location i,
+.footer-email i {
+  color: #0B1957;
+}
+
+/*# sourceMappingURL=styles.css.map */

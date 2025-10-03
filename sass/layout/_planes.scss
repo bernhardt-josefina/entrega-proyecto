@@ -1,0 +1,29 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixin' as m;
+@use '../utilities/extends';
+/*PLANES*/
+.planes {
+  background-color: v.$color-fondo;
+  padding: 60px 20px;
+
+  &-container {
+    @include m.grid(3, 30px);
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+.plan-card {
+  @extend %card;
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover { transform: translateY(-5px); }
+
+  h2 { font-size: 1.8rem; margin-bottom: 15px; color: v.$color-primario; }
+  .subtitulo { font-size: 1rem; color: v.$color-link; }
+  p { font-size: 1rem; margin-bottom: 20px; color: v.$color-texto; }
+}

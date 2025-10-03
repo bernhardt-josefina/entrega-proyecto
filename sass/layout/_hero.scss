@@ -1,0 +1,42 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixin' as m;
+/*INDEX*/
+.hero {
+  @include m.flex-center(row, 0);
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background-color: v.$color-claro;
+  @include m.respond-to(tablet) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  @include m.respond-to(tablet) {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.hero-text {
+  flex: 1 1 300px;
+  padding: 20px;
+  text-align: left;
+
+  h2 { font-size: 2rem; margin-bottom: 20px; color: v.$color-primario; }
+  p  { font-size: 1.1rem; margin-bottom: 20px; }
+
+  @include m.respond-to(tablet) {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}

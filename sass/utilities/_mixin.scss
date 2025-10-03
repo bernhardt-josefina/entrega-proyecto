@@ -1,0 +1,42 @@
+@use 'variables' as v;
+// MEDIA
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $breakpoint == mobile {
+    @media (max-width: 480px) { @content; }
+  }
+}
+//FLEX
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+//GRID
+@mixin grid($columns: 3, $gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+ //BOTONES
+@mixin button($bg: v.$color-acento, $hover: v.$color-acento-hover, $color: #fff, $padding: 10px 20px, $radius: 5px) {
+  background-color: $bg;
+  color: $color;
+  padding: $padding;
+  border-radius: $radius;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: $hover;
+    transform: translateY(-2px);
+  }
+}

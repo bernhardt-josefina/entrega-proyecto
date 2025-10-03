@@ -1,0 +1,30 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixin' as m;
+/*FOOTER*/
+.footer-container {
+  @include m.flex-center(row, 20px);
+  background-color: v.$color-secundario;
+  color: v.$color-primario;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+  text-align: center;
+
+  // Tablet
+  @include m.respond-to(tablet) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer-location,
+.footer-email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+
+  i {
+    color: v.$color-primario;
+  }
+}

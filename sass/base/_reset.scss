@@ -1,0 +1,15 @@
+@use '../utilities/variables' as v;
+//RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+//BODY
+body {
+  background-color: v.$color-secundario;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: v.$color-primario;
+  line-height: 1.5;
+}

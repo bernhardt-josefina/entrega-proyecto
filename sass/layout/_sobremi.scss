@@ -1,0 +1,36 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixin' as m;
+/*SOBRE MI*/
+.sobremi {
+  background-color: v.$color-claro;
+  padding: 60px 20px;
+
+  &-content {
+    @include m.flex-center(row, 40px);
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  &-texto {
+    flex: 1 1 400px;
+
+    h2 { font-size: 2rem; margin-bottom: 20px; color: v.$color-primario; }
+    h3 { font-size: 1.5rem; margin: 30px 0 10px; }
+    p  { font-size: 1rem; margin-bottom: 20px; }
+  }
+
+  &-foto {
+    flex: 1 1 250px;
+    text-align: center;
+
+    .foto-perfil {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #ccc;
+    }
+  }
+}
