@@ -116,6 +116,30 @@ header {
     padding: 10px;
   }
 }
+.hero-text .cta-button {
+  background-color: #6c5ce7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.hero-text .cta-button:hover {
+  background-color: #4834d4;
+  transform: translateY(-2px);
+}
+.hero-text .cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .hero-text .cta-button {
+    width: 100%;
+  }
+}
 
 /*SOBRE MI*/
 .sobremi {
@@ -131,7 +155,7 @@ header {
   flex-wrap: wrap;
   max-width: 1000px;
   margin: 0 auto;
-  align-items: flex-start;
+  align-items: stretch;
 }
 .sobremi-texto {
   flex: 1 1 400px;
@@ -150,15 +174,29 @@ header {
   margin-bottom: 20px;
 }
 .sobremi-foto {
-  flex: 1 1 250px;
+  flex: 1 1 300px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sobremi-foto .foto-perfil {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
   background-color: #ccc;
+}
+@media (max-width: 768px) {
+  .sobremi .sobremi-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .sobremi .sobremi-foto {
+    margin-top: 20px;
+  }
 }
 
 /*PLANES*/
@@ -174,10 +212,18 @@ header {
   margin: 0 auto;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .planes-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .planes-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 .plan-card {
-  flex: 1 1 300px;
-  max-width: 300px;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -197,6 +243,23 @@ header {
   font-size: 1rem;
   margin-bottom: 20px;
   color: #333;
+}
+.plan-card a.plan-button {
+  background-color: #6c5ce7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.plan-card a.plan-button:hover {
+  background-color: #4834d4;
+  transform: translateY(-2px);
+}
+.plan-card a.plan-button {
+  display: inline-block;
 }
 
 /*RECETAS*/
@@ -221,13 +284,24 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .recetas-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .recetas-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .receta-card {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 100%;
   overflow: hidden;
   color: #0B1957;
   transition: transform 0.3s ease;

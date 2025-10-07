@@ -15,8 +15,18 @@
   }
 
   &-container {
-    @include m.grid(3, 20px);
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include m.respond-to(tablet){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include m.respond-to(mobile){
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -24,7 +34,7 @@
   @extend %card;
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 100%;
   overflow: hidden;
   color: v.$color-primario;
   transition: transform 0.3s ease;

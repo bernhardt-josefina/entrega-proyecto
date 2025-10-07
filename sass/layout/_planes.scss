@@ -11,13 +11,17 @@
     max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
+    @include m.respond-to(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include m.respond-to(mobile){
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 .plan-card {
   @extend %card;
-  flex: 1 1 300px;
-  max-width: 300px;
   text-align: center;
   transition: transform 0.3s ease;
 
@@ -26,4 +30,9 @@
   h2 { font-size: 1.8rem; margin-bottom: 15px; color: v.$color-primario; }
   .subtitulo { font-size: 1rem; color: v.$color-link; }
   p { font-size: 1rem; margin-bottom: 20px; color: v.$color-texto; }
+
+  a.plan-button {
+  @include m.button;
+  display: inline-block;
+  }
 }
