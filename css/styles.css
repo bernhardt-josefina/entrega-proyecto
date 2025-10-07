@@ -364,6 +364,15 @@ header {
     flex-direction: column;
   }
 }
+@media (max-width: 480px) {
+  .contacto-form .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contacto-form .form-row input, .contacto-form .form-row select {
+    flex: 1 1 100%;
+  }
+}
 .contacto-form textarea {
   width: 100%;
   padding: 10px;

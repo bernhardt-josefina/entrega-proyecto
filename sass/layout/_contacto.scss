@@ -35,6 +35,13 @@
       @include m.respond-to(tablet) {
         flex-direction: column;
       }
+      @include m.respond-to(mobile){
+        flex-direction: column;
+        gap: 15px;
+        input,select {
+          flex: 1 1 100%;
+        }
+      }
     }
 
     textarea {
