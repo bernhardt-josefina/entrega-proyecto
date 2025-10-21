@@ -5,7 +5,7 @@
   @include m.flex-center(row, 0);
   flex-wrap: wrap;
   padding: 60px 20px;
-  background-color: v.$color-claro;
+  background-color: v.$color-fondo;
   @include m.respond-to(tablet) {
     flex-direction: column;
     text-align: center;

@@ -9,6 +9,9 @@
   font-size: 0.9rem;
   flex-wrap: wrap;
   text-align: center;
+  position:fixed;
+  bottom:0px;
+  width:100%;
 
   // Tablet
   @include m.respond-to(tablet) {
