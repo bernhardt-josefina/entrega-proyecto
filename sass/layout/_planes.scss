@@ -5,6 +5,7 @@
 .planes {
   background-color: v.$color-fondo;
   padding: 60px 20px;
+  margin-bottom: 30px;
 
   &-container {
     @include m.grid(3, 30px);

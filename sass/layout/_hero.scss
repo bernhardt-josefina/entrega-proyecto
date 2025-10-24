@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   padding: 60px 20px;
   background-color: v.$color-fondo;
+  margin-bottom: 30px;
   @include m.respond-to(tablet) {
     flex-direction: column;
     text-align: center;
