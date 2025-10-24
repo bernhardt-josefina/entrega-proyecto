@@ -4,7 +4,6 @@
 .sobremi {
   background-color: v.$color-fondo;
   padding: 60px 20px;
-  margin-bottom: 30px;
 
   &-content {
     @include m.flex-center(row, 40px);
@@ -47,5 +46,17 @@
     .sobremi-foto{
       margin-top: 20px;
     }
+  }
+}
+
+//Ajuste para que footer no tape boton//
+@include m.respond-to(tablet) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+@include m.respond-to(mobile) {
+  main {
+    padding-bottom: 30px;
   }
 }

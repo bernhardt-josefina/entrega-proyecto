@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   padding: 60px 20px;
   background-color: v.$color-fondo;
-  margin-bottom: 30px;
   @include m.respond-to(tablet) {
     flex-direction: column;
     text-align: center;
@@ -49,5 +48,16 @@
     @include m.respond-to(mobile){
       width: 100%;
     }
+  }
+}
+//Ajuste para que footer no tape boton//
+@include m.respond-to(tablet) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+@include m.respond-to(mobile) {
+  main {
+    padding-bottom: 30px;
   }
 }

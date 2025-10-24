@@ -5,7 +5,6 @@
 .planes {
   background-color: v.$color-fondo;
   padding: 60px 20px;
-  margin-bottom: 30px;
 
   &-container {
     @include m.grid(3, 30px);
@@ -49,5 +48,16 @@
   a.plan-button {
   @include m.button;
   display: inline-block;
+  }
+}
+//Ajuste para que footer no tape boton//
+@include m.respond-to(tablet) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+@include m.respond-to(mobile) {
+  main {
+    padding-bottom: 30px;
   }
 }

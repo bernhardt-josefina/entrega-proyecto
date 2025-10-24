@@ -72,7 +72,6 @@ header {
   flex-wrap: wrap;
   padding: 60px 20px;
   background-color: #F8F3EA;
-  margin-bottom: 30px;
 }
 @media (max-width: 768px) {
   .hero {
@@ -142,11 +141,20 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    padding-bottom: 30px;
+  }
+}
 /*SOBRE MI*/
 .sobremi {
   background-color: #F8F3EA;
   padding: 60px 20px;
-  margin-bottom: 30px;
 }
 .sobremi-content {
   display: flex;
@@ -201,11 +209,20 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    padding-bottom: 30px;
+  }
+}
 /*PLANES*/
 .planes {
   background-color: #F8F3EA;
   padding: 60px 20px;
-  margin-bottom: 30px;
 }
 .planes-container {
   display: grid;
@@ -277,11 +294,20 @@ header {
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    padding-bottom: 30px;
+  }
+}
 /*RECETAS*/
 .recetas {
   background-color: #F8F3EA;
   padding: 60px 20px;
-  margin-bottom: 30px;
 }
 .recetas-header {
   text-align: center;
@@ -338,11 +364,20 @@ header {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    padding-bottom: 30px;
+  }
+}
 /*CONTACTO*/
 .contacto {
   background-color: #F8F3EA;
   padding: 60px 20px;
-  margin-bottom: 30px;
 }
 .contacto-header {
   text-align: center;
@@ -413,6 +448,16 @@ header {
   transform: translateY(-2px);
 }
 
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    padding-bottom: 30px;
+  }
+}
 /*FOOTER*/
 .footer-container {
   display: flex;
